@@ -1,4 +1,4 @@
-<h1 align="center">InAccord Installer</h1>
+<h1 align="center">InAccord Website</h1>
 
 <p align="center">
   <a href="#overview">Overview</a> |
@@ -47,9 +47,6 @@ This repository contians the source code for the InAccord installer. This instal
 
 These will link you to the latest builds found in the [releases](https://github.com/InAccord/installer/releases/) tab of this repository.
 
-| [Windows (7+)](https://github.com/InAccord/Installer/releases/latest/download/InAccord-Windows.exe)  | [macOS (10.10+)](https://github.com/InAccord/Installer/releases/latest/download/InAccord-Mac.zip) | [Linux](https://github.com/InAccord/Installer/releases/latest/download/InAccord-Linux.AppImage) |
-| ------------- | ------------- | ------------- |
-
 
 
 ## Codebase
@@ -60,15 +57,7 @@ These will link you to the latest builds found in the [releases](https://github.
 |  └──images               // Images (logos, backgrounds, etc...) used by the installer.
 ├──scripts                 // Scripts needed for development and contributing.
 └──src                     // The installer's source code.
-    ├──mian                // Electron "mian" process. Creates and configures the BrowserWindow.
-    └──renderer            // Electron "renderer" process. Contians most components and scripts.
-        ├──actions         // Scripts performed by the installer such as installing, repiaring and uninstalling.
-        |  └──utils        // Common utilities used by installer actions (such as killing discord).
-        ├──common          // Common UI components such as buttons, checkboxes, radios, etc...
-        ├──pages           // Component files for each page in the installer's setup process.
-        ├──stores          // Svelte store used for storing global data.
-        |  └──types        // Used for defining custom svelte stores.
-        └──transitions     // Contians custom Svelte transitions and animations.
+
 ```
 
 ---
@@ -87,7 +76,7 @@ These will link you to the latest builds found in the [releases](https://github.
 
 ### 1: Clone the repository.
 ```ps
-git clone https://github.com/InAccord/installer && cd installer
+git clone https://github.com/
 ```
 This will create a local copy of this repository and navigate you to the root folder of the repository.
 
@@ -123,6 +112,6 @@ yarn dist
 
 For information on contributing to this project, please see [CONTRIBUTING.md](/CONTRIBUTING.md).
 
-<a href="https://github.com/InAccord/installer/graphs/contributors">
+<a href="https://github.com/docrst/InAccord/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=InAccord/installer" />
 </a>
