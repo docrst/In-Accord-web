@@ -41,7 +41,7 @@
 
 # Overview
 
-This repository contians the source code for the InAccord installer. This installer is written with [electron-webpack](https://webpack.electron.build/) and [Svelte 3](https://svelte.dev/).
+This repository contians the source code for the In-Accord Website. This installer is written with [electron-webpack](https://webpack.electron.build/) and [Svelte 3](https://svelte.dev/).
 
 ## Downloads
 
@@ -64,7 +64,7 @@ These will link you to the latest builds found in the [releases](https://github.
 
 # Development
 
-> This is a tutorial designed for people looking to contribute to, or work directly with the installer's source code. If you are just looking to download and install InAccord, visit the [releases](https://github.com/InAccord/installer/releases/) page of this repository.
+> This is a tutorial designed for people looking to contribute to, or work directly with the installer's source code. If you are just looking to download and install InAccord, visit the [releases](https://github.com/docrst/InAccord/) page of this repository.
 
 ## Prerequisites
 - [Git](https://git-scm.com)
