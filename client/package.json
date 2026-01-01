@@ -1,6 +1,11 @@
 {
   "name": "inaccordweb",
+  "description": "inaccordweb",
+  "homepage": "https://github.com/docrst/In-Accord-web",
+  "bugs": "https://github.com/docrst/In-Accord-web/issues",
+  "author": "Docrst: https://github.com/docrst/",
   "version": "0.1.0",
+  "license": "AGPL-3.0 license",
   "private": true,
   "scripts": {
     "dev": "next dev",
