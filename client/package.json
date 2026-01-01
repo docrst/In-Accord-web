@@ -1,11 +1,6 @@
 {
   "name": "inaccordweb",
-  "description": "inaccordweb",
-  "homepage": "https://github.com/docrst/In-Accord-web",
-  "bugs": "https://github.com/docrst/In-Accord-web/issues",
-  "author": "Docrst: https://github.com/docrst/",
   "version": "0.1.0",
-  "license": "AGPL-3.0 license",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -25,6 +20,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "recharts": "^3.6.0",
+    "redux-persist": "^6.0.0",
     "uuid": "^13.0.0"
   },
   "devDependencies": {
@@ -34,12 +30,10 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/uuid": "^10.0.0",
-    "autoprefixer": "^10.4.23",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4",
     "tw-colors": "^3.3.2",
     "typescript": "^5"
   }

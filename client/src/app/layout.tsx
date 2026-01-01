@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.hydrated}>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className={inter.className}>
         <DashboardWrapper>{children}</DashboardWrapper>
       </body>
     </html>
