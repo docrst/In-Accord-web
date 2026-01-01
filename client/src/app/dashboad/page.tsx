@@ -1,6 +1,8 @@
 const Dashboard = (props: Props) => {
     return (
-      <div>Dashboard</div>
+      <div>Dashboard
+        Under Construction
+      </div>
     )
 }
 

@@ -2,7 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import { setIsSidebarCollapsed } from '@/state';
-import { Layout, LucideIcon, Menu } from 'lucide-react';
+import { Archive, CircleDollarSignIcon, Clipboard, Layout, LucideIcon, Menu, Settings, User } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -22,6 +22,11 @@ const SidebarLink = ({
   const pathname = usePathname();
   const isActive = 
     pathname === href || (pathname == "/" && href === "/dashboard");
+    pathname === href || (pathname == "/" && href === "/inventory");
+    pathname === href || (pathname == "/" && href === "/products");
+    pathname === href || (pathname == "/" && href === "/users");    
+    pathname === href || (pathname == "/" && href === "/Settings");
+    pathname === href || (pathname == "/" && href === "/Expenses");
 
   return (
     <Link href={href}>
@@ -86,18 +91,50 @@ const Sidebar = () => {
     </div>
 
      {/* LINKS */}
-     <div className="grow mt-8">
+
+     <div className='grow mt-8'>
         <SidebarLink 
         href="/dashboard" 
         icon={Layout}
         label="Dashboard" 
         isCollapsed={isSidebarCollapsed} 
       />
+        <SidebarLink 
+        href="/inventory" 
+        icon={Archive}
+        label="Inventory" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
+        href="/products" 
+        icon={Clipboard}
+        label="Products" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
+        href="/users" 
+        icon={User}
+        label="Users" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
+        href="/settings" 
+        icon={Settings}
+        label="Settings" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
+        href="/expenses" 
+        icon={CircleDollarSignIcon}
+        label="Expenses" 
+        isCollapsed={isSidebarCollapsed} 
+      />
     </div>
 
      {/* FOOTER */}
-       <div>
-      <p className="text-center text-xs text-gray-500">&copy; 2026 In-Accord</p>    
+
+       <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-6`}>
+      <p className="text-center text-xs text-red-500">&copy; 2026 In-Accord | GARD Realms LLC</p>    
     </div>
    </div>
   );
