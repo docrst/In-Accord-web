@@ -76,7 +76,6 @@ const Sidebar = () => {
     <div className={sidebarClassNames}>
 
     {/* TOP LOGO */}
-
     <div className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${
       isSidebarCollapsed ? 'px-5' : 'px-8'
     }`}
@@ -109,7 +108,6 @@ const Sidebar = () => {
         label="Dashboard" 
         isCollapsed={isSidebarCollapsed} 
       />
-      
       <p>Download</p>
         <SidebarLink 
         href="/plugins" 
@@ -189,7 +187,6 @@ const Sidebar = () => {
     </div>
 
      {/* FOOTER */}
-
        <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-6`}>
     <hr></hr>
       <p> </p>
