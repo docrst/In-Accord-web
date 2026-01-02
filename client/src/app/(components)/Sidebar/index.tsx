@@ -2,7 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import { setIsSidebarCollapsed } from '@/state';
-import { Archive, CircleDollarSignIcon, Clipboard, FileQuestionIcon, Layout, LucideIcon, Menu, PlugIcon, Settings, User } from 'lucide-react';
+import { Archive, BotIcon, CircleDollarSignIcon, Clipboard, DrumstickIcon, FileQuestionIcon, Layout, LucideIcon, Menu, PlugIcon, ServerCogIcon, Settings, User, WebhookIcon } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -25,10 +25,14 @@ const SidebarLink = ({
     pathname === href || (pathname == "/" && href === "/plugins");
     pathname === href || (pathname == "/" && href === "/themes");
     pathname === href || (pathname == "/" && href === "/inventory");
-    pathname === href || (pathname == "/" && href === "/products");
-    pathname === href || (pathname == "/" && href === "/users");    
+    pathname === href || (pathname == "/" && href === "/products");   
     pathname === href || (pathname == "/" && href === "/settings");
     pathname === href || (pathname == "/" && href === "/expenses");
+    pathname === href || (pathname == "/" && href === "/bots");
+    pathname === href || (pathname == "/" && href === "/servers");
+    pathname === href || (pathname == "/" && href === "/upload");
+    pathname === href || (pathname == "/" && href === "/users"); 
+    pathname === href || (pathname == "/" && href === "/support");
 
   return (
     <Link href={href}>
@@ -63,12 +67,12 @@ const Sidebar = () => {
     dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
   }; 
 
-  const sidebarClasseNames = `fixed flex flex-col ${
+  const sidebarClassNames = `fixed flex flex-col ${
     isSidebarCollapsed ? "w-0 : md:w-16" : "w-72 md:w-64"
   } bg-white transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
 
   return (
-    <div className={sidebarClasseNames}>
+    <div className={sidebarClassNames}>
 
     {/* TOP LOGO */}
 
@@ -94,13 +98,15 @@ const Sidebar = () => {
 
      {/* LINKS */}
 
-     <div className='grow mt-8'>
+     <div className='grow mt-7'>
         <SidebarLink 
         href="/dashboard" 
         icon={Layout}
         label="Dashboard" 
         isCollapsed={isSidebarCollapsed} 
       />
+      <hr></hr>
+      <p>Downloads</p>
         <SidebarLink 
         href="/plugins" 
         icon={PlugIcon}
@@ -113,10 +119,12 @@ const Sidebar = () => {
         label="Themes" 
         isCollapsed={isSidebarCollapsed} 
       />
+      <hr></hr>
+      <p>My Stuff</p>
         <SidebarLink 
         href="/inventory" 
         icon={Archive}
-        label="My Inventory" 
+        label="My Downloads" 
         isCollapsed={isSidebarCollapsed} 
       />
         <SidebarLink 
@@ -126,21 +134,49 @@ const Sidebar = () => {
         isCollapsed={isSidebarCollapsed} 
       />
         <SidebarLink 
-        href="/users" 
-        icon={User}
-        label="Users" 
-        isCollapsed={isSidebarCollapsed} 
-      />
-        <SidebarLink 
         href="/settings" 
         icon={Settings}
-        label="Settings" 
+        label="My Settings" 
         isCollapsed={isSidebarCollapsed} 
       />
         <SidebarLink 
         href="/expenses" 
         icon={CircleDollarSignIcon}
         label="Expenses" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+    <hr></hr>
+    <p>Adverts</p>
+        <SidebarLink 
+        href="/bots" 
+        icon={BotIcon}
+        label="Bots/Apps" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
+        href="/servers" 
+        icon={ServerCogIcon}
+        label="Servers" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
+        href="/uploads" 
+        icon={DrumstickIcon}
+        label="Uploads" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+      <hr></hr>
+      <p>Contacts</p>
+        <SidebarLink 
+        href="/users" 
+        icon={User}
+        label="All Users" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
+        href="/support" 
+        icon={WebhookIcon}
+        label="Support" 
         isCollapsed={isSidebarCollapsed} 
       />
     </div>

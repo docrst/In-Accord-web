@@ -9,7 +9,7 @@
         "**/*tsconfig.json": true,
         ".cache": true,
         "retool.config.json": true,
-        "**/node_modules": false
+        "**/node_modules": true
     },
     "window.title": "e:\\In-Accord-web",
     "workbench.colorCustomizations": {
@@ -51,5 +51,6 @@
         "activityBar.activeBorder": "#09e1b2",
         "activityBarBadge.foreground": "#000000",
         "activityBarBadge.background": "#09e1b2"
-    }
+    },
+    "WillLuke.nextjs.hasPrompted": true
 }
