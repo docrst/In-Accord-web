@@ -21,7 +21,7 @@ const SidebarLink = ({
 }: SidebarLinkProps) => {
   const pathname = usePathname();
   const isActive = 
-    pathname === href || (pathname == "/" && href === "/dashboard");
+    pathname === href || (pathname == "/" && href === "./dashboard");
     pathname === href || (pathname == "/" && href === "/plugins");
     pathname === href || (pathname == "/" && href === "/themes");
     pathname === href || (pathname == "/" && href === "/inventory");
@@ -69,7 +69,7 @@ const Sidebar = () => {
   }; 
 
   const sidebarClassNames = `fixed flex flex-col ${
-    isSidebarCollapsed ? "w-0 : md:w-16" : "w-72 md:w-64"
+    isSidebarCollapsed ? "w-0 : md:w-16" : "w-66 md:w-64"
   } bg-white transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
 
   return (
@@ -87,10 +87,10 @@ const Sidebar = () => {
         isSidebarCollapsed ? "hidden" : "block"
         } font-extrabold text-2xl`}
       >            
-        I-A
+        In-Accord
       </h1>
 
-    <button className="md-hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100" 
+    <button className="md-hidden px-6 py-6 bg-gray-100 rounded-full hover:bg-blue-100" 
       onClick={toggleSidebar} 
       >
       <Menu className="w-4 h-4" />
@@ -99,7 +99,7 @@ const Sidebar = () => {
 
      {/* LINKS */}
 
-     <div className='grow mt-7'>
+     <div className='grow mt-11'>
         <SidebarLink 
         href="/dashboard" 
         icon={Layout}
@@ -107,7 +107,7 @@ const Sidebar = () => {
         isCollapsed={isSidebarCollapsed} 
       />
       <hr></hr>
-      <p>Downloads</p>
+      <p>Download</p>
         <SidebarLink 
         href="/plugins" 
         icon={PlugIcon}
@@ -159,14 +159,12 @@ const Sidebar = () => {
         icon={ServerCogIcon}
         label="Servers" 
         isCollapsed={isSidebarCollapsed} 
-
       />
         <SidebarLink 
         href="/hosting" 
         icon={PcCaseIcon}
         label="Hosting" 
         isCollapsed={isSidebarCollapsed}
-
       />
         <SidebarLink 
         href="/uploads" 
