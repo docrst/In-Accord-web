@@ -174,13 +174,13 @@ const Sidebar = () => {
         <SidebarLink 
         href="/users" 
         icon={User}
-        label="All Users" 
+        label="Ask a Dev" 
         isCollapsed={isSidebarCollapsed} 
       />
         <SidebarLink 
         href="/support" 
         icon={WebhookIcon}
-        label="Support" 
+        label="All Support" 
         isCollapsed={isSidebarCollapsed} 
       />
     </div>
