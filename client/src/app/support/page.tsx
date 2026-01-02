@@ -1,6 +1,10 @@
 const Support = (props: Props) => {
     return (
-      <div>Support
+      <div>
+              <hr></hr>
+              <p></p>
+              <p></p>
+        Support
         Under Construction
       </div>
     )

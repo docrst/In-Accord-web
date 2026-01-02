@@ -1,6 +1,10 @@
 const Settings = (props: Props) => {
     return (
-      <div>Settings
+      <div>
+              <hr></hr>
+      <p></p>
+      <p></p>
+        Settings
         Under Construction
       </div>
     )

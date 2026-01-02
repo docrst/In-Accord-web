@@ -88,7 +88,6 @@ const Sidebar = () => {
       >            
         In-Accord
       </h1>
-
     <button className="md-hidden px-6 py-6 bg-gray-100 rounded-full hover:bg-blue-100" 
       onClick={toggleSidebar} 
       >
@@ -103,7 +102,7 @@ const Sidebar = () => {
      <div className='grow mt-6 flex flex-col gap-1  overflow-y-auto'>
 
         <SidebarLink 
-        href="/dashboard" 
+        href="/dashboard"
         icon={Layout}
         label="Dashboard" 
         isCollapsed={isSidebarCollapsed} 

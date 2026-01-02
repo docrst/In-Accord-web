@@ -1,6 +1,10 @@
 const Plugins = (props: Props) => {
     return (
-      <div>Plugins
+      <div>
+              <hr></hr>
+      <p></p>
+      <p></p>
+        Plugins
         Under Construction
       </div>
     )

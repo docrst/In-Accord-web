@@ -1,6 +1,10 @@
 const Servers = (props: Props) => {
     return (
-      <div>Servers
+      <div>
+              <hr></hr>
+      <p></p>
+      <p></p>
+        Servers
         Under Construction
       </div>
     )

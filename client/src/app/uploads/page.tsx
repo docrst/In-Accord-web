@@ -1,6 +1,10 @@
 const Uploads = (props: Props) => {
     return (
-      <div>Uploads
+      <div>
+      <hr></hr>
+      <p></p>
+      <p></p> 
+        Uploads
         Under Construction
       </div>
     )

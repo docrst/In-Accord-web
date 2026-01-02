@@ -1,6 +1,10 @@
 const Bots = (props: Props) => {
     return (
-      <div>Bots/Apps
+      <div>
+              <hr></hr>
+      <p></p>
+      <p></p>
+        Bots/Apps
         Under Construction
       </div>
     )

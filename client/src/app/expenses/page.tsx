@@ -1,13 +1,15 @@
-const Products = (props: Props) => {
+ const Expenses = (props: Props) => {
     return (
+
       <div>
-              <hr></hr>
+      <hr></hr>
       <p></p>
       <p></p>
-        Products
+        Expenses
         Under Construction
       </div>
     )
 }
 
-export default Products
+export default Expenses
+

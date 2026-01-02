@@ -1,6 +1,11 @@
-const Dashboard = (props: Props) => {
+ const Dashboard = (props: Props) => {
     return (
-      <div>Dashboard
+
+      <div>
+      <hr></hr>
+      <p></p>
+      <p></p>
+        Dashboard
         Under Construction
       </div>
     )

@@ -1,6 +1,10 @@
 const Hosting = (props: Props) => {
     return (
-      <div>Bots/Apps Hosting
+      <div>
+              <hr></hr>
+      <p></p>
+      <p></p>
+        Bots/Apps Hosting
         Under Construction
       </div>
     )

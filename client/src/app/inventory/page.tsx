@@ -1,6 +1,10 @@
 const Inventory = (props: Props) => {
     return (
-      <div>Inventory
+      <div>
+              <hr></hr>
+      <p></p>
+      <p></p>
+        Inventory
         Under Construction
       </div>
     )
