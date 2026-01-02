@@ -2,7 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import { setIsSidebarCollapsed } from '@/state';
-import { Archive, CircleDollarSignIcon, Clipboard, Layout, LucideIcon, Menu, Settings, User } from 'lucide-react';
+import { Archive, CircleDollarSignIcon, Clipboard, FileQuestionIcon, Layout, LucideIcon, Menu, PlugIcon, Settings, User } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -22,11 +22,13 @@ const SidebarLink = ({
   const pathname = usePathname();
   const isActive = 
     pathname === href || (pathname == "/" && href === "/dashboard");
+    pathname === href || (pathname == "/" && href === "/plugins");
+    pathname === href || (pathname == "/" && href === "/themes");
     pathname === href || (pathname == "/" && href === "/inventory");
     pathname === href || (pathname == "/" && href === "/products");
     pathname === href || (pathname == "/" && href === "/users");    
-    pathname === href || (pathname == "/" && href === "/Settings");
-    pathname === href || (pathname == "/" && href === "/Expenses");
+    pathname === href || (pathname == "/" && href === "/settings");
+    pathname === href || (pathname == "/" && href === "/expenses");
 
   return (
     <Link href={href}>
@@ -100,15 +102,27 @@ const Sidebar = () => {
         isCollapsed={isSidebarCollapsed} 
       />
         <SidebarLink 
+        href="/plugins" 
+        icon={PlugIcon}
+        label="Plugins" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
+        href="/themes" 
+        icon={FileQuestionIcon}
+        label="Themes" 
+        isCollapsed={isSidebarCollapsed} 
+      />
+        <SidebarLink 
         href="/inventory" 
         icon={Archive}
-        label="Inventory" 
+        label="My Inventory" 
         isCollapsed={isSidebarCollapsed} 
       />
         <SidebarLink 
         href="/products" 
         icon={Clipboard}
-        label="Products" 
+        label="My Products" 
         isCollapsed={isSidebarCollapsed} 
       />
         <SidebarLink 
