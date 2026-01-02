@@ -98,7 +98,7 @@ const Sidebar = () => {
     </div>
 
      {/* LINKS */}
-
+      <hr></hr>
      <div className='grow mt-11'>
         <SidebarLink 
         href="/dashboard" 
