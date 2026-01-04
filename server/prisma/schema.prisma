@@ -10,7 +10,6 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  // The url line that was here should be removed
 }
 
 model Users {
