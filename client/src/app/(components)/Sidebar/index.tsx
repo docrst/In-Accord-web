@@ -73,10 +73,10 @@ const Sidebar = () => {
 
   const collapsedWidth = 64;
   // Allow an even thinner minimum while keeping icons usable
-  const minWidth = 80;
+  const minWidth = 70;
   const maxWidth = 320;
   // Default open width trimmed further for a slimmer sidebar
-  const defaultOpenWidth = 90;
+  const defaultOpenWidth = 80;
 
   const toggleSidebar = () => {
     if (isSidebarCollapsed) {
