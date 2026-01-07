@@ -20,6 +20,30 @@ export const getDashboardStats = async (
             date: "desc",
            },
         });
+        const purchaseSummary = await prisma.purchaseSummary.findMany({
+            take: 5,
+           orderBy: {
+            date: "desc",
+           },
+        });
+        const expensesSummary = await prisma.expensesSummary.findMany({
+            take: 5,
+           orderBy: {
+            date: "desc",
+           },
+        });
+        const expensesByCategorySummaryRaw = await prisma.expensesByCategory.findMany({
+            take: 5,
+           orderBy: {
+            date: "desc",
+           },
+        });
+        const expensesByCategorySummary = expensesByCategorySummaryRaw.map(item => ({
+            ...item,
+            amount: item.amount.toString()
+        }));
+
+        
     } catch (error) {
      res.status(500).json({ message: "Error retrieving dashboard metrics" });
     } 
