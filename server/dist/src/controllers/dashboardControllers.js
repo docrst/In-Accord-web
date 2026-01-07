@@ -32,25 +32,25 @@ const getDashboardStats = (req, res) => __awaiter(void 0, void 0, void 0, functi
                 date: "desc",
             },
         });
-        const expensesSummary = yield prisma.expensesSummary.findMany({
+        const expenseSummary = yield prisma.expenseSummary.findMany({
             take: 5,
             orderBy: {
                 date: "desc",
             },
         });
-        const expensesByCategorySummaryRaw = yield prisma.expensesByCategory.findMany({
+        const expenseByCategorySummaryRaw = yield prisma.expenseByCategory.findMany({
             take: 5,
             orderBy: {
                 date: "desc",
             },
         });
-        const expensesByCategorySummary = expensesByCategorySummaryRaw.map(item => (Object.assign(Object.assign({}, item), { amount: item.amount.toString() })));
+        const expenseByCategorySummary = expenseByCategorySummaryRaw.map((item) => (Object.assign(Object.assign({}, item), { amount: item.amount.toString() })));
         res.json({
             popularProducts,
             saleSummary,
             purchaseSummary,
-            expensesSummary,
-            expensesByCategorySummary
+            expenseSummary,
+            expenseByCategorySummary
         });
     }
     catch (error) {
