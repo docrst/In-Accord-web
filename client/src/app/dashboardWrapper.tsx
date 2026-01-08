@@ -19,6 +19,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
     } else {
       html.classList.remove("dark");
     }
+    console.log('Dark mode changed to:', isDarkMode, 'HTML classes:', html.classList.value);
   }, [isDarkMode]);
 
   const minWidth = 120;
