@@ -21,12 +21,19 @@ const CardPopularProducts  = () => {
                key={product.productId}
                className="flex items-center justify-between gap-3 px-5 py-7 border-b"
              >
-            <div> img </div>
-            <div className="flex flex-col justify-between gap-1">
-
-          
-
-            </div>   
+              <div>
+              <div> img </div>
+              <div className="flex flex-col justify-between gap-1">
+                <div className="font-bold text-gray-700">{product.name}</div>
+                <div className="flex text-sm items-center">
+                <span className="font-bold text-blue-500 text-xl">
+                  ${product.price}
+                </span>
+                <span className="mx-2">|</span>
+                <div>rating</div>
+              </div>
+            </div> 
+            </div>
           </div>
          ))}
         </div>
